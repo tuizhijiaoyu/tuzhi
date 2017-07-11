@@ -1,8 +1,13 @@
-/*基础规范*/
 body,ul,h1,h2,h3,h4,h5,h6,p,input,span{
     margin:0;
     padding:0;
     list-style:none;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Microsoft YaHei",微软雅黑,Verdana,Arial;
 }
 img{
     border:none;
@@ -19,10 +24,13 @@ i{
 html{
     font-size:100px;
 }
-*{
-    box-sizing:border-box;
-}
-/*响应式*/
+
+
+
+
+
+
+
 @media screen and (min-width:320px){
     html{
         font-size:42.6667px;

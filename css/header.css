@@ -1,0 +1,81 @@
+/*头部*/
+.wm-header{
+    width:100%;
+    height:1.98rem;
+    background:url('../images/wm-header.png') no-repeat center/cover;
+    border-top:1px solid rgba(255,255,255,0);
+}
+.wm-zz{
+    width:6.3rem;
+    height:1.58rem;
+    margin:0 auto;
+    margin-top:0.2rem;
+    background:rgba(255,255,255,0.5);
+}
+.wm-header-top{
+    width:100%;
+    height:0.98rem;
+    padding:0 0.21rem;
+    padding-top:0.17rem;
+    display:flex;
+}
+.wm-header-top a{
+    display:block;
+    width:0.8rem;
+    height:0.8rem;
+    margin-right:0.13rem;
+}
+.wm-header-top a img{
+    display:block;
+    width:100%;
+    height:100%;
+}
+.wm-tzjy{
+    height:0.48rem;
+    font-weight:500;
+    font-size:0.48rem;
+    margin-top:-0.1rem;
+    margin-bottom:0.05rem;
+}
+.wm-entz{
+    height:0.36rem;
+    font-weight:300;
+    font-size:0.36rem;
+}
+.wm-tel{
+    display:block;
+    height:0.4rem;
+    width:2rem;
+    margin-left:0.73rem;
+    margin-top:0.1rem;
+}
+.wm-header-bottom{
+    width:100%;
+    height:0.6rem;
+    padding:0 0.21rem;
+    display:flex;
+    justify-content:space-between;
+}
+.wm-header-bottom li a{
+    display:block;
+    font-size:0.24rem;
+    line-height:0.6rem;
+    color:#000;
+}
+/*面包屑*/
+.wm-mbx{
+    width:1.8rem;
+    display:flex;
+    margin-left:2.86rem;
+    margin-top:0.23rem;
+    margin-bottom:0.7rem;
+}
+.wm-index{
+    display:block;
+    color:#000;
+    font-size:0.24rem;
+}
+.wm-mbx span{
+    display:block;
+    font-size:0.24rem;
+}
