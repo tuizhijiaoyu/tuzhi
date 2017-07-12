@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/swiper.min.css">
     <script src="js/index.js"></script>
     <script src="js/swiper.min.js"></script>
+
+    <!--<script src="js/yuan.js"></script>-->
 </head>
 <body>
 <!--头部开始-->
@@ -114,7 +116,7 @@
         <div class="wheel">
             <div class="wh">
                 <ul class="inner">
-                    <li>
+                    <li id="inner-img">
                         <a href="">
                             <img src="images/wheel.png" alt="">
                         </a>
@@ -321,8 +323,9 @@
     var sx=0;
     var nx=0;
     var mx=0;
-    var w=window.innerWidth-110;
-    console.log(w)
+//    var w=window.innerWidth;
+    var w=document.querySelector("#inner-img").offsetWidth;
+    console.log(w);
     var movex=0;
     var i=0;
     var dir;
