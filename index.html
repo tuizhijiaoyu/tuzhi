@@ -48,13 +48,59 @@
         <li class="lists">优秀学员</li>
     </ul>
     <div class="tiao"></div>
-    <ul class="banner">
-        <li>
-            <a href="#">
-                <img src="images/banner1.png" alt="">
-            </a>
-        </li>
-    </ul>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <ul class="banner swiper-slide">
+                <li>
+                    <a href="#">
+                        <img src="images/banner1.png" alt="">
+                    </a>
+                </li>
+                <div class="banner-wz">
+                    <span class="banner-wz-top">知识改变命运</span>
+                    <span class="banner-wz-center">教育决定未来</span>
+                    <a href="#">
+                        <button class="banner-wz-btn">了解更多</button>
+                    </a>
+                </div>
+            </ul>
+
+
+            <ul class="banner swiper-slide">
+                <li>
+                    <a href="#">
+                        <img src="images/banner1.png" alt="">
+                    </a>
+                </li>
+                <div class="banner-wz">
+                    <span class="banner-wz-top">知识改变命运</span>
+                    <span class="banner-wz-center">教育决定未来</span>
+                    <a href="#">
+                        <button class="banner-wz-btn">了解更多</button>
+                    </a>
+                </div>
+            </ul>
+
+
+            <ul class="banner swiper-slide">
+                <li>
+                    <a href="#">
+                        <img src="images/banner1.png" alt="">
+                    </a>
+                </li>
+                <div class="banner-wz">
+                    <span class="banner-wz-top">知识改变命运</span>
+                    <span class="banner-wz-center">教育决定未来</span>
+                    <a href="#">
+                        <button class="banner-wz-btn">了解更多</button>
+                    </a>
+                </div>
+            </ul>
+
+        </div>
+    </div>
+    <!--148   53-->
+
 </div>
 <!--banner结束-->
 
@@ -65,34 +111,33 @@
         <span class="main-box-bottom">All courses</span>
     </div>
     <div class="wheel-box">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="wheel swiper-slide">
-                    <a href="">
-                        <img src="images/wheel.png" alt="">
-                    </a>
-                </div>
-                <div class="wheel swiper-slide">
-                    <a href="">
-                        <img src="images/wheel.png" alt="">
-                    </a>
-                </div>
-                <div class="wheel swiper-slide">
-                    <a href="">
-                        <img src="images/wheel.png" alt="">
-                    </a>
-                </div>
-                <div class="wheel swiper-slide">
-                    <a href="">
-                        <img src="images/wheel.png" alt="">
-                    </a>
-                </div>
+        <div class="wheel">
+            <div class="wh">
+                <ul class="inner">
+                    <li>
+                        <a href="">
+                            <img src="images/wheel.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/wheel.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/wheel.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/wheel.png" alt="">
+                        </a>
+                    </li>
+                </ul>
             </div>
+
         </div>
-
-            <!--<div class="swiper-button-next"></div>-->
-            <!--<div class="swiper-button-prev"></div>-->
-
             <!--<div class="zuojian">-->
                 <!--<img src="images/zuojian.png" alt="">-->
             <!--</div>-->
@@ -204,7 +249,7 @@
     </ul>
 </div>
 <!--学员说结束-->
-<!--663 242-->
+
 <!--底部开始-->
 <div class="container-hui">
     <div class="input-box">
@@ -269,9 +314,52 @@
         </div>
     </div>
     <div class="copy">1998-2016 图志公司版权所有</div>
-
-
 </footer>
 <!--底部结束-->
 </body>
+<script>
+    var sx=0;
+    var nx=0;
+    var mx=0;
+    var w=window.innerWidth-110;
+    console.log(w)
+    var movex=0;
+    var i=0;
+    var dir;
+    var st,et;
+    window.onresize=function () {   //只要页面大小发生变化就会有改变
+    };
+    var length=document.querySelectorAll(".inner li").length;
+    var inner=document.querySelector(".inner");
+    inner.addEventListener("touchstart",function (e) {
+        st=e.timeStamp;
+        inner.style.transition="none";
+        sx=e.changedTouches[0].clientX;
+    });
+    inner.addEventListener("touchmove",function (e) {
+        nx=e.changedTouches[0].clientX;
+        mx=nx-sx;
+        inner.style.transform=`translateX(${mx+movex}px)`;
+    });
+    inner.addEventListener("touchend",function (e) {
+        et=e.timeStamp;
+        var time=et-st;
+        inner.style.transition="all 0.5s";
+        var n=i;
+        dir=mx<0?"left":"right";
+        if(Math.abs(mx)<w/3||time<300){
+        }else{
+            if(dir=="left"){
+                i++;
+            }else{
+                i--;
+            }
+        }
+        if(i<0||i>length-1){
+            i=n;
+        }
+        movex=-i*w;
+        inner.style.transform=`translateX(${movex}px)`
+    });
+</script>
 </html>
